@@ -1,0 +1,11 @@
+
+database:
+  connectionURI: "database connection uri"
+
+instances:
+  inst1:
+    diskfree: secret
+    http: supersecret
+
+server:
+  port: 1122
