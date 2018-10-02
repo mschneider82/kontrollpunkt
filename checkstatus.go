@@ -6,7 +6,7 @@ import "strings"
 type CheckStatus int
 
 const (
-	OK CheckStatus = iota + 1
+	OK CheckStatus = iota
 	Warn
 	Error
 )
