@@ -11,7 +11,17 @@ import (
 	"github.com/spf13/viper"
 )
 
-var myDB = NewInMemoryDB()
+type Kontrollpunkt struct {
+	Backend  *DB
+	Instance map[string][]Category `json:"Instance,omitempty"`
+}
+
+func NewKontrollpunkt(backend *DB) *Kontrollpunkt {
+	return &Kontrollpunkt{
+		backend,
+		make(map[string][]Category),
+	}
+}
 
 // getCheckForName should query database interface and returning the check
 func getCheckForName(c *gin.Context) {

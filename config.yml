@@ -1,5 +1,6 @@
 
 database:
+  type: redis
   connectionURI: "database connection uri"
 
 instances:
